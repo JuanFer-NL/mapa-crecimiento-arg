@@ -16,7 +16,7 @@ Datos: VAB a precios básicos (precios constantes de 2004), 24 jurisdicciones, 5
 
 ## App en vivo
 
-https://proyecto-contar-con-datos.streamlit.app/
+https://mapa-crecimiento-argentino.streamlit.app/
 
 (Deployada desde el repositorio anónimo `acdc-projects00/proyecto-contar-con-datos-2026`, requisito de presentación con seudónimo del Concurso — ver punto 10 de las Bases y Condiciones.)
 
