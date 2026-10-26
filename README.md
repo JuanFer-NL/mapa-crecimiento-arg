@@ -1,6 +1,6 @@
 # El mapa del crecimiento argentino
 
-Proyecto presentado al Concurso Nacional de Visualización de Datos 2026 — "Contar con Datos" (categoría: Exploración interactiva).
+Este proyecto iba a ser presentado al Concurso Nacional de Visualización de Datos 2026 — "Contar con Datos" (categoría: Exploración interactiva). Se terminó descartando.
 
 ## Objetivo
 
@@ -17,8 +17,6 @@ Datos: VAB a precios básicos (precios constantes de 2004), 24 jurisdicciones, 5
 ## App en vivo
 
 https://mapa-crecimiento-argentino.streamlit.app/
-
-(Deployada desde el repositorio anónimo `acdc-projects00/proyecto-contar-con-datos-2026`, requisito de presentación con seudónimo del Concurso — ver punto 10 de las Bases y Condiciones.)
 
 ## Estructura del repositorio
 
