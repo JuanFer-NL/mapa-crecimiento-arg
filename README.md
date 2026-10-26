@@ -45,7 +45,3 @@ Rscript r/analisis_exploratorio.R
 # App
 cd app && streamlit run app.py
 ```
-
-## Licencia y uso
-
-El material presentado a este concurso cede derechos de uso y reproducción a la Secretaría de Innovación, Ciencia y Tecnología de la Nación y a la Universidad de San Andrés, conforme el punto 13 de las Bases y Condiciones del Concurso.
