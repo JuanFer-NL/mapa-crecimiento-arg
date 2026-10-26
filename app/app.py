@@ -1,7 +1,7 @@
 """
 Mapa interactivo de la estructura económica provincial de Argentina (2004-2024).
 
-Concurso Nacional de Visualización de Datos 2026 — "Contar con Datos"
+Concurso Nacional de Visualización de Datos 2026 "Contar con Datos"
 Categoría: Exploración interactiva
 
 Diseño: mapa a pantalla completa con tarjetas flotantes (HUD) encima.
@@ -36,8 +36,8 @@ MAPBOX_STYLE = "carto-positron-nolabels"
 MAP_CENTER = {"lat": -40.0, "lon": -64.0}
 MAP_ZOOM = 3.4
 
-VISTA_CRECIMIENTO = "📈 Crecimiento"
-VISTA_HHI = "🧩 Concentración sectorial"
+VISTA_CRECIMIENTO = "Crecimiento"
+VISTA_HHI = "Concentración sectorial"
 
 # ---------------------------------------------------------------------------
 # CSS: mapa ocupa toda la página, tarjetas flotantes encima
@@ -335,13 +335,13 @@ with st.container(key="hud_left"):
     )
 
     st.markdown(
-        f"**🇦🇷 País (2004-2022):** +{crecimiento_nacional:.1f}%  \n"
-        f"**📈 Mayor crecimiento:** {mas_crecio['provincia']} (+{mas_crecio['crecimiento_acumulado_pct']:.0f}%)  \n"
-        f"**📉 Menor crecimiento:** {menos_crecio['provincia']} ({menos_crecio['crecimiento_acumulado_pct']:.1f}%)  \n"
-        f"**🎯 Más concentrada (2024):** {mas_concentrada['provincia']} (HHI {mas_concentrada['hhi']:.2f})"
+        f"**País (2004-2022):** +{crecimiento_nacional:.1f}%  \n"
+        f"**Mayor crecimiento:** {mas_crecio['provincia']} (+{mas_crecio['crecimiento_acumulado_pct']:.0f}%)  \n"
+        f"**Menor crecimiento:** {menos_crecio['provincia']} ({menos_crecio['crecimiento_acumulado_pct']:.1f}%)  \n"
+        f"**Más concentrada (2024):** {mas_concentrada['provincia']} (HHI {mas_concentrada['hhi']:.2f})"
     )
 
-    st.markdown("##### 🏆 Ranking de crecimiento 2004-2022")
+    st.markdown("##### Ranking de crecimiento 2004-2022")
     ranking = crecimiento.sort_values("crecimiento_acumulado_pct", ascending=True)
     fig_ranking = px.bar(
         ranking,
@@ -375,7 +375,7 @@ with st.container(key="hud_left"):
 if vista == VISTA_CRECIMIENTO and provincia_seleccionada:
     with st.container(key="hud_right"):
         if not seleccion_por_click:
-            st.caption("Mostrando Neuquén de ejemplo — hacé click en cualquier provincia.")
+            st.caption("Mostrando Neuquén, hacé click en cualquier provincia.")
         st.markdown(f"### {provincia_seleccionada}")
 
         fila = crecimiento[crecimiento["provincia"] == provincia_seleccionada].iloc[0]
@@ -420,7 +420,7 @@ if vista == VISTA_CRECIMIENTO and provincia_seleccionada:
 
         est_prov = estructura[estructura["provincia"] == provincia_seleccionada]
 
-        st.markdown("##### 🔬 Desagregación por macro-sector, año a año")
+        st.markdown("##### Desagregación por macro-sector, año a año")
         anio_detalle = st.selectbox(
             "Año",
             sorted(est_prov["anio"].unique(), reverse=True),
@@ -452,6 +452,6 @@ if vista == VISTA_CRECIMIENTO and provincia_seleccionada:
         if provincia_seleccionada in CASOS_DESTACADOS:
             caso = CASOS_DESTACADOS[provincia_seleccionada]
             st.markdown("---")
-            st.markdown(f"#### 📖 {caso['titulo']}")
+            st.markdown(f"#### {caso['titulo']}")
             st.markdown(caso["texto"])
             st.caption(f"Fuentes: {caso['fuente']}")
